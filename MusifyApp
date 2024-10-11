@@ -1,0 +1,82 @@
+import java.util.Scanner;
+
+public class MusifyApp {
+    public Scanner keyboard = new Scanner(System.in);
+    private String userName;
+
+
+    public static void main(String[] args)  {
+        String userName = (args[0]);
+        MusifyApp app = new MusifyApp(userName);
+        
+        app.handleFiles(args);
+        app.displayWelcomeMessage(args);
+        app.runMainMenu(args);
+
+      
+        app.printWelcome();
+        app.printMainMenu();
+        app.menuFunction();
+        
+       
+    }
+
+
+    //constructor
+    public MusifyApp(String userName) {
+        this.userName = userName;
+    }
+//
+    
+    private void handleFiles(String[] args) {
+        
+    }
+
+    private void runMainMenu(String[] args) {
+        
+    }
+    
+    private void printWelcome() {
+        if (userName != null) {
+            System.out.println("Data loading complete.");
+            System.out.print("Welcome " + userName + ". Choose your music, podcasts or watch short clips.");
+        } else {
+            System.out.println("No Playlist data found to load.");
+            System.out.println("Welcome Stranger. Choose your music, podcasts or watch short clips.");
+        }
+      
+        
+    }
+
+    private void printMainMenu() {
+        System.out.println("Please select one of the options.");
+        System.out.println("1. Create a new playlist.");
+        System.out.println("2. View all playlist.");
+        System.out.println("3. View contents of a playlist.");
+        System.out.println("4. Remove a playlist.");
+        System.out.println("5. Modify a playlist.");
+        System.out.println("6. Play contents of a playlist.");
+        System.out.println("7. Exit Musify.");
+    }
+    
+//allows user to input options in the menu
+    private void menuFunction() {
+        int selector = keyboard.nextInt();
+        switch (selector) {
+            case 1: 
+            break;
+
+            case 2:
+            break;
+
+            case 3:
+            break;
+
+            default:
+        }
+    }
+
+    private void displayWelcomeMessage(String[] args) {
+       
+    }
+}
